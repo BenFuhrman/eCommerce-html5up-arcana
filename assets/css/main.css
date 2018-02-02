@@ -2216,7 +2216,7 @@
 			}
 
 /* Button */
-
+	
 	input[type="submit"],
 	input[type="reset"],
 	input[type="button"],
@@ -2268,7 +2268,7 @@
 		input[type="reset"].alt,
 		input[type="button"].alt,
 		.button.alt {
-			background-color: #555555;
+			background-color: #512184;
 			color: #fff;
 		}
 
