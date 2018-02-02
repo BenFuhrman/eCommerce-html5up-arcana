@@ -248,6 +248,8 @@
 		-moz-box-sizing: border-box;
 		-webkit-box-sizing: border-box;
 		box-sizing: border-box;
+		position: center;
+		text-align: center;
 	}
 
 	.row > * {
