@@ -1893,6 +1893,11 @@
 		font-style: italic;
 		padding: 1em 0 1em 2em;
 	}
+	
+	center {
+		position: center;
+		text-align: center;		
+	}
 
 	section.special, article.special {
 		text-align: center;
