@@ -248,6 +248,8 @@
 		-moz-box-sizing: border-box;
 		-webkit-box-sizing: border-box;
 		box-sizing: border-box;
+		position: center;
+		text-align: center;
 	}
 
 	.row > * {
@@ -1890,6 +1892,11 @@
 		border-left: solid 0.5em #e0e0e0;
 		font-style: italic;
 		padding: 1em 0 1em 2em;
+	}
+	
+	center {
+		position: center;
+		text-align: center;		
 	}
 
 	section.special, article.special {
