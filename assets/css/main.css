@@ -1948,6 +1948,7 @@
 	input[type="text"],
 	input[type="password"],
 	input[type="email"],
+	select[type="text"],
 	textarea {
 		-moz-appearance: none;
 		-webkit-appearance: none;
@@ -1971,12 +1972,14 @@
 		input[type="text"]:focus,
 		input[type="password"]:focus,
 		input[type="email"]:focus,
+		select[type="text"]:focus,
 		textarea:focus {
 			border-color: #512184;
 		}
 
 	input[type="text"],
 	input[type="password"],
+	select[type="text"],
 	input[type="email"] {
 		line-height: 1em;
 	}
