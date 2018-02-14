@@ -70,28 +70,28 @@
 						<form>
 							<div class="row 50%">
 								<div class="12u">
-									<input type="text" name="name" id="firstName" placeholder="First Name" />
+									<input type="text" name="name" id="firstName" placeholder="First Name" required pattern="[A-Za-z]" />
 								</div>
 								<div class="12u">
-									<input type="text" name="name" id="lastName" placeholder="Last Name" />
+									<input type="text" name="name" id="lastName" placeholder="Last Name" required pattern="[A-Za-z]"/>
 								</div>
 								<div class="12u">
-									<input type="email" name="email" id="email" placeholder="Email Address" />
+									<input type="email" name="email" id="email" placeholder="Email Address" required pattern="[^@]+@[^@]+\.[a-zA-Z]{2,6}" />
 								</div>
 								<div class="12u">
-									<input type="text" name="name" id="password" placeholder="Password" />
+									<input type="text" name="name" id="password" placeholder="Password" required pattern="[A-Za-z0-9]"/>
 								</div>
 								<div class="12u">
-									<input type="text" name="name" id="address" placeholder="Address" />
+									<input type="text" name="name" id="address" placeholder="Address" required pattern="[A-Za-z0-9]" />
 								</div>
 								<div class="12u">
-									<input type="text" name="name" id="city" placeholder="City" />
+									<input type="text" name="name" id="city" placeholder="City" required pattern="[A-Za-z]" />
 								</div>
 								<div class="12u">
 									<input type="text" name="name" id="state" placeholder="State" />
 								</div>
 								<div class="12u">
-									<input type="text" name="name" id="zip" placeholder="Zip Code" />
+									<input type="text" name="name" id="zip" placeholder="Zip Code" required pattern="[0-9]{5}" />
 								</div>
 							</div>
 						</form>
