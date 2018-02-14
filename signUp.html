@@ -71,27 +71,30 @@
 							<div class="row 50%">
 								<div class="12u" style="padding-bottom:0px; padding-top:0px;">
 									<h1 align="left" style="padding:0px; font-size:20px">First Name:</h1>
-									<input type="text" name="name" id="firstName" placeholder="" required pattern="[A-Za-z]" title="Input should only contain letters."/>
+									<input type="text" name="name" id="firstName" placeholder="" required pattern="[A-Za-z]+" title="Input should only contain letters."/>
 								</div>
 								<div class="12u" style="padding-bottom:0px; padding-top:0px;">
 									<h1 align="left" style="padding:0px; font-size:20px">Last Name:</h1>
-									<input type="text" name="name" id="lastName" placeholder="" required pattern="[A-Za-z]" title="Input should only contain letters."/>
+									<input type="text" name="name" id="lastName" placeholder="" required pattern="[A-Za-z]+" title="Input should only contain letters."/>
 								</div>
 								<div class="12u" style="padding-bottom:0px; padding-top:0px;">
 									<h1 align="left" style="padding:0px; font-size:20px">Email Address:</h1>
-									<input type="email" name="email" id="email" placeholder="" required pattern="[^@]+@[^@]+\.[a-zA-Z]{2,6}" title="Input should be of a valid email form."/>
+									<input type="email" name="email" id="email" placeholder="" required pattern="[a-zA-Z0-9]+[@]{1}[a-zA-Z]+\.[a-zA-Z]{2,6}" title="Input should be of a valid email form."/>
+									<!--
+									required pattern="[^@]+@[^@]+\.[a-zA-Z]{2,6}"
+									-->
 								</div>
 								<div class="12u" style="padding-bottom:0px; padding-top:0px;">
 									<h1 align="left" style="padding:0px; font-size:20px">Password:</h1>
-									<input type="text" name="name" id="password" placeholder="" required pattern="[A-Za-z0-9]" title="Input should only contain letters and numbers."/>
+									<input type="text" name="name" id="password" placeholder="" required pattern="[A-Za-z0-9]+" title="Input should only contain letters and numbers."/>
 								</div>
 								<div class="12u" style="padding-bottom:0px; padding-top:0px;">
 									<h1 align="left" style="padding:0px; font-size:20px">Address:</h1>
-									<input type="text" name="name" id="address" placeholder="" required pattern="[A-Za-z0-9]" title="Input should only contain letters and numbers."/>
+									<input type="text" name="name" id="address" placeholder="" required pattern="[A-Za-z0-9]+" title="Input should only contain letters and numbers."/>
 								</div>
 								<div class="12u" style="padding-bottom:0px; padding-top:0px;">
 									<h1 align="left" style="padding:0px; font-size:20px">City:</h1>
-									<input type="text" name="name" id="city" placeholder="" required pattern="[A-Za-z]" title="Input should only contain letters."/>
+									<input type="text" name="name" id="city" placeholder="" required pattern="[A-Za-z]+" title="Input should only contain letters."/>
 								</div>
 								<div class="12u" style="padding-bottom:0px; padding-top:0px;">
 									<h1 align="left" style="padding:0px; font-size:20px">State:</h1>
