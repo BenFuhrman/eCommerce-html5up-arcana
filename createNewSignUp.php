@@ -1,18 +1,21 @@
 <?php
-			//Step1
-			 $db = mysqli_connect('localhost','admin','password','test')
-			 or die('Error connecting to MySQL server.');
 
-			//Step2
-			$query = "SELECT * FROM customerdata";
-			mysqli_query($db, $query) or die('Error querying database.');
-			
-			$result = mysqli_query($db, $query);
-			$row = mysqli_fetch_array($result);
-
-			while ($row = mysqli_fetch_array($result)) {
-				echo $row['First Name'] . ' ' . $row['Last Name']'<br />';
-			}
-			//Step 4
-			mysqli_close($db);
+require 'connection.php';
+$conn    = Connect();
+$name    = $conn->real_escape_string($_POST['u_name']);
+$email   = $conn->real_escape_string($_POST['u_email']);
+$subj    = $conn->real_escape_string($_POST['subj']);
+$message = $conn->real_escape_string($_POST['message']);
+$query   = "INSERT into tb_cform (u_name,u_email,subj,message) VALUES('" . $name . "','" . $email . "','" . $subj . "','" . $message . "')";
+$success = $conn->query($query);
+ 
+if (!$success) {
+    die("Couldn't enter data: ".$conn->error);
+ 
+}
+ 
+echo "Thank You For Contacting Us <br>";
+ 
+$conn->close();
+ 
 ?>
