@@ -3,6 +3,9 @@
 	Arcana by HTML5 UP
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+	
+	https://stackoverflow.com/questions/3518002/how-can-i-set-the-default-value-for-an-html-select-element
+	http://www.the-art-of-web.com/html/html5-form-validation/
 -->
 <html>
 	<head>
@@ -67,38 +70,38 @@
 				<div class="row">			
 					<section class="12u" style="padding-left:100px; padding-right:100px; padding-top:0px; padding-bottom:10px;">
 						<h2>Sign Up</h2>
-						<form>
+						<form action="./createNewSignUp.php" method="get">
 							<div class="row 50%">
 								<div class="12u" style="padding-bottom:0px; padding-top:0px;">
 									<h1 align="left" style="padding:0px; font-size:20px">First Name:</h1>
-									<input type="text" name="name" id="firstName" placeholder="" required pattern="[A-Za-z]+" title="Input should only contain letters."/>
+									<input type="text" name="fname" id="firstName" placeholder="" required pattern="[A-Za-z]+" title="Input should only contain letters."/>
 								</div>
 								<div class="12u" style="padding-bottom:0px; padding-top:0px;">
 									<h1 align="left" style="padding:0px; font-size:20px">Last Name:</h1>
-									<input type="text" name="name" id="lastName" placeholder="" required pattern="[A-Za-z]+" title="Input should only contain letters."/>
+									<input type="text" name="lname" id="lastName" placeholder="" required pattern="[A-Za-z]+" title="Input should only contain letters."/>
 								</div>
 								<div class="12u" style="padding-bottom:0px; padding-top:0px;">
 									<h1 align="left" style="padding:0px; font-size:20px">Email Address:</h1>
-									<input type="email" name="email" id="email" placeholder="" required pattern="[a-zA-Z0-9]+[@]{1}[a-zA-Z]+\.[a-zA-Z]{2,6}" title="Input should be of a valid email form."/>
+									<input type="email" name="email" id="email" placeholder="" required pattern="[a-zA-Z0-9\.]+[@]{1}[a-zA-Z]+\.[a-zA-Z]{2,6}" title="Input should be of a valid email form."/>
 									<!--
 									required pattern="[^@]+@[^@]+\.[a-zA-Z]{2,6}"
 									-->
 								</div>
 								<div class="12u" style="padding-bottom:0px; padding-top:0px;">
 									<h1 align="left" style="padding:0px; font-size:20px">Password:</h1>
-									<input type="text" name="name" id="password" placeholder="" required pattern="[A-Za-z0-9]+" title="Input should only contain letters and numbers."/>
+									<input type="text" name="password" id="password" placeholder="" required pattern="[A-Za-z0-9]+" title="Input should only contain letters and numbers."/>
 								</div>
 								<div class="12u" style="padding-bottom:0px; padding-top:0px;">
 									<h1 align="left" style="padding:0px; font-size:20px">Address:</h1>
-									<input type="text" name="name" id="address" placeholder="" required pattern="[A-Za-z0-9]+" title="Input should only contain letters and numbers."/>
+									<input type="text" name="address" id="address" placeholder="" required pattern="[A-Za-z0-9]+" title="Input should only contain letters and numbers."/>
 								</div>
 								<div class="12u" style="padding-bottom:0px; padding-top:0px;">
 									<h1 align="left" style="padding:0px; font-size:20px">City:</h1>
-									<input type="text" name="name" id="city" placeholder="" required pattern="[A-Za-z]+" title="Input should only contain letters."/>
+									<input type="text" name="city" id="city" placeholder="" required pattern="[A-Za-z]+" title="Input should only contain letters."/>
 								</div>
 								<div class="12u" style="padding-bottom:0px; padding-top:0px;">
 									<h1 align="left" style="padding:0px; font-size:20px">State:</h1>
-									<select type="text" name="name" id="state" placeholder="" required pattern="">
+									<select type="text" name="state" id="state" placeholder="" required pattern="">
 										<option value="" selected disabled hidden></option>
 										<option value="AL">Alabama</option>
 										<option value="AK">Alaska</option>
@@ -155,19 +158,20 @@
 								</div>
 								<div class="12u" style="padding-bottom:0px; padding-top:0px;">
 									<h1 align="left" style="padding:0px; font-size:20px">Zip Code:</h1>
-									<input type="text" name="name" id="zip" placeholder="" required pattern="[0-9]{5}" title="Input should only contain five numbers."/>
+									<input type="text" name="zip" id="zip" placeholder="" required pattern="[0-9]{5}" title="Input should only contain five numbers."/>
+								</div>
+								<div class="row 50%" align="center">
+									<div class="12u">
+										<ul class="actions">
+											<li><input type="submit" class="button alt" value="Sign-up" /></li>
+										</ul>
+									</div>
 								</div>
 							</div>
 						</form>
 					</section>			
 				</div>
-				<div class="row 50%">
-					<div class="12u">
-						<ul class="actions">
-							<li><input type="submit" class="button alt" value="Create Account" /></li>
-						</ul>
-					</div>
-				</div>
+				
 		</div>
 		<!--End pasted text -->
 		<div class="form">
