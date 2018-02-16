@@ -2,6 +2,7 @@
 
 include ("connection.php");
 $conn = Connect();
+<<<<<<< HEAD
 $toinsertfname =  $_POST["FirstName"];
 $toinsertlname =  $_POST["LastName"];
 $toinsertemail = $_POST["Email"];
@@ -24,6 +25,28 @@ echo $toinsertzip;
 if (isset($_POST['LastName'])){
 	$lname   = $_GET['LastName'];
 }
+=======
+if (isset($_POST['FirstName'])){
+	$fname = $_POST['FirstName'];
+}
+if (isset($_POST['LastName'])){
+	$lname   = $_POST['LastName'];
+}
+
+$email    = $_POST['Email'];
+$password   = $_POST['Password'];
+$address   = $_POST['Address'];
+$city    = $_POST['City'];
+$state    = $_POST['State'];
+$zip   = $_POST['Zip'];
+//$test1 = 'balogna';
+$sql = "INSERT INTO customerdata (FirstName, LastName, Email, Password, Address, City, State, Zip) VALUES ($fname, $lname, $email, $password, $address, $city, $state, $zip)";
+$result = $conn->query($sql);
+//VALUES ($fname, $lname, $email, $password, $address, $city, $state, $zip)";
+//$query   = "INSERT into customerdata (FirstName, LastName, Email, Password, Address, City, State, Zip) VALUES('" . $fname . "','" . $lname ."','" . $email . "','" . $password . "','" . $address . "','" . $city . "','" . $state . "','" . $zip . "')";
+
+//$query = "INSERT into temptable (name) VALUES ('" . $fname . "')";
+>>>>>>> 5291c805989b7204539a7bf3b4d61c479436f373
 
 $email    = $_GET['Email'];
 $password   = $_GET['Password'];
