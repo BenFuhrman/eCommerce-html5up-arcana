@@ -5,10 +5,10 @@ function Connect() {
 	 $dbhost = "localhost:3306";
 	 $dbuser = "root";
 	 $dbpass = "";
-	 $dbname = "temporary";
+	 $dbname = "test";
 	 
 	 // Create connection
-	 $conn = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname);
+	 $conn = new mysqli($dbhost, $dbuser, $dbpass, $dbname);
 	 // or die($conn->connect_error)
 	 //return $conn;
 
@@ -19,6 +19,7 @@ function Connect() {
 		exit;
 	}
 	echo "Connected";
+	return $conn;
 }
  
 ?>
