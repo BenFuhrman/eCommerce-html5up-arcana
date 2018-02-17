@@ -9,10 +9,7 @@ function Connect() {
 	 
 	 // Create connection
 	 $conn = new mysqli($dbhost, $dbuser, $dbpass, $dbname);
-	 // or die($conn->connect_error)
-	 //return $conn;
-
-	//$success = $conn->query($query);
+	 
 	if (!$conn) {
 		echo "Connection error";
 	  //  die("Couldn't enter data: ".$conn->error);
