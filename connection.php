@@ -15,7 +15,7 @@ function Connect() {
 	  //  die("Couldn't enter data: ".$conn->error);
 		exit;
 	}
-	echo nl2br("Connected");
+	//echo nl2br("Connected");
 	return $conn;
 }
  

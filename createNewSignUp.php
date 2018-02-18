@@ -11,7 +11,7 @@ $toinsertcity =  $_POST["City"];
 $toinsertstate = $_POST["State"];
 $toinsertzip =  $_POST["Zip"];
 
-echo nl2br("\n");
+//echo nl2br("\n");
 /*
 echo $toinsertfname;
 echo $toinsertlname;
@@ -26,15 +26,16 @@ echo nl2br("\n");
  
 $sqlcheckemail = "SELECT * FROM customerdata WHERE Email='$toinsertemail'";
 $amountwithsameemail = $conn->query($sqlcheckemail);
-if(mysqli_num_rows($amountwithsameemail) > 0){
-	echo nl2br('Provided email already exists');
-	header('Location: /eCommerce-html5up-arcana/badSignUp.html');
+$isAllowed = mysqli_num_rows($amountwithsameemail) > 0;
+if($isAllowed){
+	//echo nl2br('Provided email already exists');
+	//header('Location: /eCommerce-html5up-arcana/badSignUp.html');
 } 
 else{
 	$sql = "INSERT INTO customerdata (FirstName, LastName, Email, Password, Address, City, State, Zip) VALUES ('$toinsertfname', '$toinsertlname', '$toinsertemail', '$toinsertpass', '$toinsertaddress', '$toinsertcity', '$toinsertstate', '$toinsertzip')";
 	$result = $conn->query($sql);
-	echo nl2br('New account successfully created');	
-	header('Location: /eCommerce-html5up-arcana/signUp.html');	
+	//echo nl2br('New account successfully created');	
+	//header('Location: /eCommerce-html5up-arcana/signUp.html');	
 }
  
 $conn->close();
@@ -46,6 +47,18 @@ exit;
 
 ?>
 
+<script type="text/javascript">
+	var wasSuccessful = "<?php echo $isAllowed ?>";
+	window.history.go(-1);
+	if(wasSuccessful == 1){
+		alert("Error: Provided email is already in use");
+	}
+	else{
+		// hard reload		
+		alert("Successful sign-up");
+		window.open("/eCommerce-html5up-arcana/signUp.html", "_self");
+	}
+</script>
 
 
 
