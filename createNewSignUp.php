@@ -28,24 +28,23 @@ $sqlcheckemail = "SELECT * FROM customerdata WHERE Email='$toinsertemail'";
 $amountwithsameemail = $conn->query($sqlcheckemail);
 if(mysqli_num_rows($amountwithsameemail) > 0){
 	echo nl2br('Provided email already exists');
+	header('Location: /eCommerce-html5up-arcana/badSignUp.html');
 } 
 else{
 	$sql = "INSERT INTO customerdata (FirstName, LastName, Email, Password, Address, City, State, Zip) VALUES ('$toinsertfname', '$toinsertlname', '$toinsertemail', '$toinsertpass', '$toinsertaddress', '$toinsertcity', '$toinsertstate', '$toinsertzip')";
 	$result = $conn->query($sql);
-	echo nl2br('New account successfully created');
+	echo nl2br('New account successfully created');	
+	header('Location: /eCommerce-html5up-arcana/signUp.html');	
 }
  
 $conn->close();
 
-?>
-
-<?php 
-
+/*
 header("Location:{$_SERVER['HTTP_REFERER']}");
 exit;
+?*/
 
 ?>
-
 
 
 
