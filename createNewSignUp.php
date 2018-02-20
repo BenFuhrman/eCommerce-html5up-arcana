@@ -11,7 +11,7 @@ $toinsertcity =  $_POST["City"];
 $toinsertstate = $_POST["State"];
 $toinsertzip =  $_POST["Zip"];
 
-$hash = crypt($toinsertpass);
+$hash = password_hash($toinsertpass, PASSWORD_DEFAULT);
 
 //echo nl2br("\n");
 /*
