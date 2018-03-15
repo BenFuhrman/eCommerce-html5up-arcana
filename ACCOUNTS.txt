@@ -3,3 +3,7 @@ prettypattiesbiz@gmail.com	PHPMYSQL
 
 test.bitpay:
 prettypattiesbiz@gmail.com	PHPMYSQL1a
+
+
+
+Use local host for php scripts Ben.

@@ -1,5 +1,5 @@
 <?php
- 
+
  
 function Connect() {
 	 $dbhost = "localhost:3306";
