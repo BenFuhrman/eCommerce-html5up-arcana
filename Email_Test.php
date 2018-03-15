@@ -16,8 +16,8 @@ require("./PHPMailer/src/SMTP.php");
     $mail->Username = "prettypattiesbiz@gmail.com";
     $mail->Password = "PHPMYSQL";
     $mail->SetFrom("prettypattiesbiz@gmail.com");
-    $mail->Subject = "Test";
-    $mail->Body = "hello";
+    $mail->Subject = "Hotpocket";
+    $mail->Body = "The pacer test is a multiaerobic capacity test";
     $mail->AddAddress("jake.wilson1007@gmail.com");
 
      if(!$mail->Send()) {

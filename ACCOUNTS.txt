@@ -7,3 +7,5 @@ prettypattiesbiz@gmail.com	PHPMYSQL1a
 
 
 Use local host for php scripts Ben.
+
+//https://stackoverflow.com/questions/28906487/fatal-error-class-phpmailer-not-found
