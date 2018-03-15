@@ -50,10 +50,13 @@ exit;
 ?>
 
 <script type="text/javascript">
+	function alertMessage(theMessage){
+		window.setTimeout( function (){alert(theMessage)}, 0);
+	}
 	var wasSuccessful = "<?php echo $isAllowed ?>";
 	window.history.go(-1);
 	if(wasSuccessful == 1){
-		alert("Error: Provided email is already in use");
+		alertMessage("Error: Provided email is already in use");
 	}
 	else{
 		// hard reload		
