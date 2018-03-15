@@ -2,7 +2,7 @@
 require 'PHPMailer/PHPMailerAutoload.php';
 $mail = new PHPMailer;
 $mail->setFrom('prettypattiesbiz@gmail.com', 'Pretty Patties');
-$mail->addAddress('jaw4fz@virginia.edu', 'My Friend');
+$mail->addAddress('jake.wilson1007@gmail.com', 'My Friend');
 $mail->Subject  = 'First PHPMailer Message';
 $mail->Body     = 'Hi! This is my first e-mail sent through PHPMailer.';
 if(!$mail->send()) {
