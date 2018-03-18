@@ -2,6 +2,7 @@
 
 include ("connection.php");
 $conn = Connect();
+
 $toinsertfname =  $_POST["FirstName"];
 $toinsertlname =  $_POST["LastName"];
 $toinsertemail = $_POST["Email"];
@@ -13,7 +14,6 @@ $toinsertzip =  $_POST["Zip"];
 
 $hash = password_hash($toinsertpass, PASSWORD_DEFAULT);
 
-//echo nl2br("\n");
 /*
 echo $toinsertfname;
 echo $toinsertlname;
@@ -28,16 +28,18 @@ echo nl2br("\n");
  
 $sqlcheckemail = "SELECT * FROM customerdata WHERE Email='$toinsertemail'";
 $amountwithsameemail = $conn->query($sqlcheckemail);
-$isAllowed = mysqli_num_rows($amountwithsameemail) > 0;
-if($isAllowed){
+$numentries = mysqli_num_rows($amountwithsameemail);
+$isAllowed = $numentries > 0;
+//echo nl2br("Number of accounts with provided email: " . $numentries . "\n");
+
+if($numentries > 0){
 	//echo nl2br('Provided email already exists');
-	//header('Location: /eCommerce-html5up-arcana/badSignUp.html');
 } 
 else{
 	$sql = "INSERT INTO customerdata (FirstName, LastName, Email, Password, Address, City, State, Zip) VALUES ('$toinsertfname', '$toinsertlname', '$toinsertemail', '$hash', '$toinsertaddress', '$toinsertcity', '$toinsertstate', '$toinsertzip')";
+	//echo $sql . "\n";
 	$result = $conn->query($sql);
-	//echo nl2br('New account successfully created');	
-	//header('Location: /eCommerce-html5up-arcana/signUp.html');	
+	//echo $result;
 }
  
 $conn->close();
@@ -50,12 +52,16 @@ exit;
 ?>
 
 <script type="text/javascript">
+
 	function alertMessage(theMessage){
 		window.setTimeout( function (){alert(theMessage)}, 0);
 	}
+	
 	var wasSuccessful = "<?php echo $isAllowed ?>";
-	window.history.go(-1);
+	
+	
 	if(wasSuccessful == 1){
+		window.history.go(-1);
 		alertMessage("Error: Provided email is already in use");
 	}
 	else{
@@ -63,6 +69,7 @@ exit;
 		alert("Successful sign-up");
 		window.open("/eCommerce-html5up-arcana/signUp.html", "_self");
 	}
+
 </script>
 
 
