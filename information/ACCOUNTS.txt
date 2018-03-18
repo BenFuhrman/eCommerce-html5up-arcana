@@ -9,3 +9,6 @@ prettypattiesbiz@gmail.com	PHPMYSQL1a
 Use local host for php scripts Ben.
 
 //https://stackoverflow.com/questions/28906487/fatal-error-class-phpmailer-not-found
+
+<div id="coindesk-widget" style="padding-left:550px"></div>
+		<script type="text/javascript" src="//widget.coindesk.com/bpiticker/coindesk-widget.min.js"></script>

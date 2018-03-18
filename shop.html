@@ -6,6 +6,14 @@
 -->
 <!-- Bitcoin live tracker code provided by https://www.coindesk.com/price/bitcoin-price-ticker-widget/ -->
 <html>
+	
+	<style>
+	hr {
+		margin: 20px 0;
+		border: 1px solid #f00;
+	}
+	</style>
+	
 	<head>
 		<title>Shop</title>
 		<meta charset="utf-8" />
@@ -67,7 +75,7 @@
 		<div id="footer">
 				<div class="row">			
 					<section class="12u" style="padding-top:0px; padding-left:100px; padding-right:100px;">
-						<h2>Products</h2>
+						<h2>Limited-Edition Products</h2>
 						<div class="row">
 							<section class="6u 12u(narrower)">
 								<div class="box post">
@@ -75,6 +83,7 @@
 									<div class="inner">
 										<h3>Plaid Patties</h3>
 										<p>$9.99 USD</p>
+										<p id="plaid">Error in Javascript</p>
 										<form action="https://test.bitpay.com/checkout" method="post" >
 											<input type="hidden" name="action" value="checkout" />
 											<input type="hidden" name="posData" value="" />
@@ -86,25 +95,63 @@
 							</section>
 							<section class="6u 12u(narrower)">
 								<div class="box post">
-									<a href="#" class="image left"><img src="images/redpatty.png" alt="" /></a>
+									<a href="#" class="image left"><img src="images/redpattyReSized.png" alt="" /></a>
 									<div class="inner">
 										<h3>Red Patties</h3>
 										<p>$4.99 USD</p>
-									<form action="https://test.bitpay.com/checkout" method="post" >
-										<input type="hidden" name="action" value="checkout" />
-										<input type="hidden" name="posData" value="" />
-										<input type="hidden" name="data" value="qirB1JNjLtMG+AfKXIWK9pTnrg85iLeZhZXQswX8DzYTeR6qjdwQ/l2zfpmsPfo3UkCv3UXGxpAN463PJTD9zsrQl8BZhXkXn7aqvafUzqE+LzrocVpZ+l1L/H60L4vM+K6uTGMSFQi0krMHX2Ifxe8JNLUZ9KSTrr+Kng0OOyhxv0ivxrxgzyXy5Hp6ozZz4qOzDNdR2C1s6g/WOz10jfpMIPFG/atOmj9zOMEwcVGflBdxMXAOVFJlyc/hkeHcGSO110bmhGmmFuRXCEt1og==" />
-										<input type="image" src="https://test.bitpay.com/img/button-large.png" border="0" name="submit" alt="BitPay, the easy way to pay with bitcoins." >
-									</form>
+										<p id="red">Error in Javascript</p>
+										<form action="https://test.bitpay.com/checkout" method="post" >
+											<input type="hidden" name="action" value="checkout" />
+											<input type="hidden" name="posData" value="" />
+											<input type="hidden" name="data" value="qirB1JNjLtMG+AfKXIWK9pTnrg85iLeZhZXQswX8DzYTeR6qjdwQ/l2zfpmsPfo3UkCv3UXGxpAN463PJTD9zsrQl8BZhXkXn7aqvafUzqE+LzrocVpZ+l1L/H60L4vM+K6uTGMSFQi0krMHX2Ifxe8JNLUZ9KSTrr+Kng0OOyhxv0ivxrxgzyXy5Hp6ozZz4qOzDNdR2C1s6g/WOz10jfpMIPFG/atOmj9zOMEwcVGflBdxMXAOVFJlyc/hkeHcGSO110bmhGmmFuRXCEt1og==" />
+											<input type="image" src="https://test.bitpay.com/img/button-large.png" border="0" name="submit" alt="BitPay, the easy way to pay with bitcoins." >
+										</form>
 									</div>
 								</div>
-							</section>
-							<div id="coindesk-widget" style="padding-left:550px"></div>
-							<script type="text/javascript" src="//widget.coindesk.com/bpiticker/coindesk-widget.min.js"></script>
+							</section>							
 						</div>
+						
+						<div align="center">
+							<h3 style="background: #2B2B2B; color: white;">Current Bitcoin Price:</h3>
+							<div class="btcwdgt-price"></div>
+						</div>
+						
 					</section>			
 				</div>
 		</div>
+
+		<script type="text/javascript">			
+			var HttpClient = function() {
+				this.get = function(aUrl, aCallback) {
+				var anHttpRequest = new XMLHttpRequest();
+				anHttpRequest.onreadystatechange = function() { 
+					if (anHttpRequest.readyState == 4 && anHttpRequest.status == 200)
+						aCallback(anHttpRequest.responseText);
+					}
+
+					anHttpRequest.open( "GET", aUrl, true );            
+					anHttpRequest.send( null );
+				}
+			}
+			
+			var client = new HttpClient();
+			client.get('https://blockchain.info/de/ticker', function(response) {
+				const data = JSON.parse(response);
+				value = data.USD.last;
+				document.getElementById("plaid").innerHTML = (9.99 / value).toFixed(10).toString() + " BTC";
+				document.getElementById("red").innerHTML =  (4.99 / value).toFixed(10).toString() + " BTC";
+			});
+		</script>
+		
+		<script>
+			(function(b,i,t,C,O,I,N) {
+				window.addEventListener('load',function() {
+					if(b.getElementById(C))return;
+					I=b.createElement(i),N=b.getElementsByTagName(i)[0];
+					I.src=t;I.id=C;N.parentNode.insertBefore(I, N);
+				},false)
+			})(document,'script','https://widgets.bitcoin.com/widget.js','btcwdgt-price');
+		</script>
 		
 		<!-- Scripts -->
 			<script src="assets/js/jquery.min.js"></script>
