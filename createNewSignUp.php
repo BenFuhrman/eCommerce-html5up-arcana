@@ -50,6 +50,7 @@ else{
 	$sql = "INSERT INTO customerdata (FirstName, LastName, Email, Password, Address, City, State, Zip) VALUES ('$toinsertfname', '$toinsertlname', '$toinsertemail', '$hash', '$toinsertaddress', '$toinsertcity', '$toinsertstate', '$toinsertzip')";
 	//echo $sql . "\n";
 	$result = $conn->query($sql);
+	$_SESSION["name"] = $toinsertfname;
 	//echo $result;
 }
  
