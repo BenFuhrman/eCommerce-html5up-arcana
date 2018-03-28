@@ -12,7 +12,18 @@ $toinsertcity =  $_POST["City"];
 $toinsertstate = $_POST["State"];
 $toinsertzip =  $_POST["Zip"];
 
-$hash = password_hash($toinsertpass, PASSWORD_DEFAULT);
+$emailextended = $toinsertemail;
+$emaillength = strlen($toinsertemail);
+for ($x = $emaillength; $x < 22; $x++){
+	$emailextended = $emailextended . 'a';
+}
+
+$options = [
+    'cost' => 11,
+    'salt' => $emailextended,
+];
+
+$hash = password_hash($toinsertpass, PASSWORD_BCRYPT, $options);
 
 /*
 echo $toinsertfname;
