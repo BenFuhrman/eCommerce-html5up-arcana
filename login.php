@@ -33,11 +33,17 @@ $conn->close();
 
 <script type="text/javascript">
 
+	function alertMessage(theMessage){
+		window.setTimeout( function (){alert(theMessage)}, 0);
+	}
+
 	var wasSuccessful = "<?php echo $isAllowed ?>";
 	if(wasSuccessful){
-		alert("Login success");
+		alertMessage("Login successful");
+		window.open("/eCommerce-html5up-arcana/login.html", "_self");
 	}
 	else {
-		alert("Login failure");
+		window.history.go(-1);
+		alertMessage("Incorrect email / password.");
 	}
 </script>
