@@ -40,11 +40,4 @@ $conn->close();
 	else {
 		alert("Login failure");
 	}
-
 </script>
-
-
-
-
-
-
