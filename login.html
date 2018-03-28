@@ -21,7 +21,7 @@ session_start();
 		
 		<div id="page-wrapper">
 			<!-- Header -->
-				<p style="padding:0px; padding-right:40px; font-size:25px; text-align:right"><a href="login.html" id="logo">Hi, click here to login<em></em></a></p>
+				<p id="loginName" style="padding:0px; padding-right:40px; font-size:25px; text-align:right"><a href="login.html" id="logo">Hi, click here to login<em></em></a></p>
 				<div id="header">
 						
 					<!-- Logo -->
@@ -107,3 +107,8 @@ session_start();
 
 	</body>
 </html>
+
+<script type="text/javascript">
+	var userName = "Ben";
+	document.getElementById("loginName").innerHTML = "Hi, " + userName;
+</script>

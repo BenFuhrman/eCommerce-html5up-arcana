@@ -27,13 +27,14 @@ $sqlfirstname = $row['FirstName'] . " ";
 
 echo $sqlfirstname;
 $numentries = mysqli_num_rows($amountwithsameemail);
+
 $_SESSION["name"] = $sqlfirstname;
 $isAllowed = $numentries > 0;
  
 $conn->close();
 
-# jabba@gmail.com
-# JabbaTheHut1
+# <jabba>@gmail.com
+# <Jabba>TheHut1
 
 ?>
 
