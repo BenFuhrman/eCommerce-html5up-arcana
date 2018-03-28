@@ -20,10 +20,14 @@ $options = [
 $hash = password_hash($toinsertpass, PASSWORD_BCRYPT, $options);
  
 $sqlcheckemail = "SELECT * FROM customerdata WHERE Email='$toinsertemail' AND Password='$hash'";
-$sqlfirstname = "SELECT * FROM customerdata WHERE Email='$toinsertemail' AND Password='$hahs'";
-$_SESSION["name"] = $sqlfirstname;
 $amountwithsameemail = $conn->query($sqlcheckemail);
+
+$row = mysqli_fetch_array($amountwithsameemail);
+$sqlfirstname = $row['FirstName'] . " ";
+
+echo $sqlfirstname;
 $numentries = mysqli_num_rows($amountwithsameemail);
+$_SESSION["name"] = $sqlfirstname;
 $isAllowed = $numentries > 0;
  
 $conn->close();
