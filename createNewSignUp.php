@@ -44,6 +44,48 @@ else{
  
 $conn->close();
 
+require("./PHPMailer/src/PHPMailer.php");
+require("./PHPMailer/src/SMTP.php");
+
+// Retrieves the web information
+
+// Prints the retrieved information
+echo $thefullname;
+echo nl2br("\n");
+echo $theemailaddress;
+echo nl2br("\n");
+echo $themessage;
+
+	// Send email
+    $mail = new PHPMailer\PHPMailer\PHPMailer();
+    $mail->IsSMTP(); // enable SMTP
+
+    $mail->SMTPDebug = 1; // debugging: 1 = errors and messages, 2 = messages only
+    $mail->SMTPAuth = true; // authentication enabled
+    $mail->SMTPSecure = 'ssl'; // secure transfer enabled REQUIRED for Gmail
+    $mail->Host = "smtp.gmail.com";
+    $mail->Port = 465; // or 587
+    $mail->IsHTML(true);
+    $mail->Username = "prettypattiesbiz@gmail.com";
+    $mail->Password = "PHPMYSQL";
+    $mail->SetFrom("prettypattiesbiz@gmail.com");
+    $mail->Subject = "Thank you for signing up for our website!";
+    $mail->Body = "Hello " . $toinsertfname . ", 
+		Thank you for signing up for our website. You can view our products on the shop page. 
+		If you need to contact us for any reason, you can do so through the Contact Us page on our website.
+		-Pretty Patties";
+    $mail->AddAddress("$toinsertemail");
+
+     if(!$mail->Send()) {
+        echo "Mailer Error: " . $mail->ErrorInfo;
+     } else {
+        echo "Message has been sent";
+     }
+	 
+// "jake.wilson1007@gmail.com"
+	 
+?>
+
 /*
 header("Location:{$_SERVER['HTTP_REFERER']}");
 exit;
