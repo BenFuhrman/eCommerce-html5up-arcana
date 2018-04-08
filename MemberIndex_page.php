@@ -22,18 +22,26 @@
 	</head>
 	<body>
 		<div id="page-wrapper">
+<<<<<<< HEAD
 		<?php if(isset($_SESSION["name"])) echo '<h1 id="loginName" style="padding-bottom:0px; padding-right:40px; font-size:25px; text-align:right"> Hi, ' . $_SESSION["name"] . ' | ' . '<a href="logout.php">Log Out</a>' . '</h1>'; ?>
+=======
+				<?php if(isset($_SESSION["name"])) echo '<h1 id="loginName" style="padding-bottom:0px; padding-right:40px; font-size:25px; text-align:right"> Hi, ' . $_SESSION["name"] . ' | ' . '<a href="logout.php">Log Out</a>' . '</h1>'; ?>
+>>>>>>> 15db58a4aa52f1b0d507b9f4b94ec2140a3cd1ec
 			<!-- Header -->
 				<div id="header">
 
 					<!-- Logo -->
-						<h1 style="padding:0px; font-size:40px"><a href="index.html" id="logo">Pretty Patties<em></em></a></h1>
-						<h1 style="padding:0px; font-size:15px"><a href="index.html" id="logo"><em>Putting the <strong>fun</strong> back in food</em></a></h1>
+						<h1 style="padding:0px; font-size:40px"><a href="index_page.php" id="logo">Pretty Patties<em></em></a></h1>
+						<h1 style="padding:0px; font-size:15px"><a href="index_page.php" id="logo"><em>Putting the <strong>fun</strong> back in food</em></a></h1>
 						<img src=./images/hamburger3.png height="50" width="50"> </img>
 					<!-- Nav -->
 						<nav id="nav">
 							<ul>
+<<<<<<< HEAD
 								<li><a href="index.html">Home</a></li>
+=======
+								<li><a href="index_page.php">Home</a></li>
+>>>>>>> 15db58a4aa52f1b0d507b9f4b94ec2140a3cd1ec
 								<!--
 								<li>
 									<a href="#">Dropdown</a>
@@ -58,11 +66,19 @@
 								<li><a href="right-sidebar.html">Right Sidebar</a></li>
 								<li><a href="two-sidebar.html">Two Sidebar</a></li>
 								-->
+<<<<<<< HEAD
 								<li><a href="shop.html">Shop</a></li>
 								<li><a href="aboutUs.html">About Us</a></li>
 								<li><a href="contactUs.html">Contact Us</a></li>
 								<?php if(!isset($_SESSION["name"])) echo '<li><a href="signUp_page.php">Sign Up</a></li>'; ?>
 								<li><a href="login.html">Login</a></li>
+=======
+								<li><a href="shop._page.php">Shop</a></li>
+								<li><a href="aboutUs_page.php">About Us</a></li>
+								<li><a href="contactUs_page.php">Contact Us</a></li>
+								<li><a href="signUp_page.php">Sign Up</a></li>
+								<li><a href="login_page.php">Login</a></li>
+>>>>>>> 15db58a4aa52f1b0d507b9f4b94ec2140a3cd1ec
 								<?php if(isset($_SESSION["name"])) echo '<li class="current"><a href="MemberIndex_page.php">Member Page</a></li>'; ?>
 							</ul>
 						</nav>
