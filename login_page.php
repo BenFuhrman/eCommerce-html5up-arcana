@@ -25,8 +25,10 @@ session_start();
 						
 					<!-- Logo -->
 						<h1 style="padding:0px; font-size:40px"><a href="index_page.php" id="logo">Pretty Patties<em></em></a></h1>
-						<h1 style="padding:0px; font-size:15px"><a href="index_page.php" id="logo"><em>Putting the <strong>fun</strong> back in food</em></a></h1>
-						<img src=./images/hamburger3.png height="50" width="50"> </img>
+						
+						<h1 style="padding:10px; font-size:15px"><a href="index_page.php" id="logo"><em>Putting the <strong>fun</strong> back in food</em></a></h1>
+						
+						<img style="padding:10px;" src=./images/hamburger3.png height="70" width="70"> </img>
 						
 					<!-- Nav -->
 						<nav id="nav">
