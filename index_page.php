@@ -59,7 +59,7 @@ session_start();
 								<li><a href="aboutUs_page.php">About Us</a></li>
 								<li><a href="contactUs_page.php">Contact Us</a></li>
 								<?php if(!isset($_SESSION["name"])) echo '<li><a href="signUp_page.php">Sign Up</a></li>'; ?>
-								<li><a href="login_page.php">Login</a></li>
+								<?php if(!isset($_SESSION["name"])) echo '<li><a href="login_page.php">Login</a></li>'; ?>
 								<?php if(isset($_SESSION["name"])) echo '<li><a href="MemberIndex_page.php">Member Page</a></li>'; ?>
 							</ul>
 						</nav>

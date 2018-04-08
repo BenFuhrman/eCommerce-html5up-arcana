@@ -15,29 +15,7 @@ $zip = $_POST["Zip"];
 
 
 
-$emailextended = $toinsertemail;
-$emaillength = strlen($toinsertemail);
-for ($x = $emaillength; $x < 22; $x++){
-	$emailextended = $emailextended . 'a';
-}
 
-$options = [
-    'cost' => 11,
-    'salt' => $emailextended,
-];
-
-$hash = password_hash($toinsertpass, PASSWORD_BCRYPT, $options);
- 
-$sqlcheckemail = "SELECT * FROM customerdata WHERE Email='$toinsertemail' AND Password='$hash'";
-$amountwithsameemail = $conn->query($sqlcheckemail);
-
-$row = mysqli_fetch_array($amountwithsameemail);
-$sqlfirstname = $row['FirstName'] . "";
-
-echo $sqlfirstname;
-$numentries = mysqli_num_rows($amountwithsameemail);
-
-$_SESSION["name"] = $sqlfirstname;
 $isAllowed = $custpass == $checkpass;
 if($isAllowed){
 	$updateInfo = $conn->query("UPDATE customerdata SET FirstName = '$fname', LastName = '$lname', Address = '$address', City = '$city', State = '$state', Zip = '$zip' WHERE Email='$custemail'");

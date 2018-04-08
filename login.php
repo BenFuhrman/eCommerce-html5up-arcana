@@ -51,7 +51,7 @@ $conn->close();
 	var wasSuccessful = "<?php echo $isAllowed ?>";
 	if(wasSuccessful){
 		alertMessage("Login successful");
-		window.open("/eCommerce-html5up-arcana/login_page.php", "_self");
+		window.open("/eCommerce-html5up-arcana/index_page.php", "_self");
 	}
 	else {
 		window.history.go(-1);
