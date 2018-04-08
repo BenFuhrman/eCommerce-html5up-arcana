@@ -61,7 +61,7 @@
 								<li><a href="shop.html">Shop</a></li>
 								<li><a href="aboutUs.html">About Us</a></li>
 								<li><a href="contactUs.html">Contact Us</a></li>
-								<li><a href="signUp.html">Sign Up</a></li>
+								<?php if(!isset($_SESSION["name"])) echo '<li><a href="signUp_page.php">Sign Up</a></li>'; ?>
 								<li><a href="login.html">Login</a></li>
 								<?php if(isset($_SESSION["name"])) echo '<li><a href="MemberIndex_page.php">Member Page</a></li>'; ?>
 							</ul>
