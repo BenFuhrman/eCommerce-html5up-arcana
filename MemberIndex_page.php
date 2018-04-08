@@ -22,7 +22,7 @@
 	</head>
 	<body>
 		<div id="page-wrapper">
-			<p style="padding:0px; padding-right:40px; font-size:25px; text-align:right"><a href="login.html" id="logo">Hi, click here to login<em></em></a></p>
+		<?php if(isset($_SESSION["name"])) echo '<h1 id="loginName" style="padding-bottom:0px; padding-right:40px; font-size:25px; text-align:right"> Hi, ' . $_SESSION["name"] . ' | ' . '<a href="logout.php">Log Out</a>' . '</h1>'; ?>
 			<!-- Header -->
 				<div id="header">
 
@@ -33,7 +33,7 @@
 					<!-- Nav -->
 						<nav id="nav">
 							<ul>
-								<li class="current"><a href="index.html">Home</a></li>
+								<li><a href="index.html">Home</a></li>
 								<!--
 								<li>
 									<a href="#">Dropdown</a>
@@ -63,7 +63,7 @@
 								<li><a href="contactUs.html">Contact Us</a></li>
 								<?php if(!isset($_SESSION["name"])) echo '<li><a href="signUp_page.php">Sign Up</a></li>'; ?>
 								<li><a href="login.html">Login</a></li>
-								<?php if(isset($_SESSION["name"])) echo '<li><a href="MemberIndex_page.php">Member Page</a></li>'; ?>
+								<?php if(isset($_SESSION["name"])) echo '<li class="current"><a href="MemberIndex_page.php">Member Page</a></li>'; ?>
 							</ul>
 						</nav>
 
