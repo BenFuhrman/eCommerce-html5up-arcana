@@ -22,7 +22,7 @@
 	</head>
 	<body>
 		<div id="page-wrapper">
-			<p style="padding:0px; padding-right:40px; font-size:25px; text-align:right"><a href="login.html" id="logo">Hi, click here to login<em></em></a></p>
+				<?php if(isset($_SESSION["name"])) echo '<h1 id="loginName" style="padding-bottom:0px; padding-right:40px; font-size:25px; text-align:right"> Hi, ' . $_SESSION["name"] . ' | ' . '<a href="logout.php">Log Out</a>' . '</h1>'; ?>
 			<!-- Header -->
 				<div id="header">
 
