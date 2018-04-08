@@ -20,7 +20,7 @@ session_start();
 	<body>
 		
 		<div id="page-wrapper">
-				<?php if(isset($_SESSION["name"])) echo '<p id="loginName" style="padding:0px; padding-right:40px; font-size:25px; text-align:right"> Hi, ' . $_SESSION["name"] . '</p>'; ?>
+				<?php if(isset($_SESSION["name"])) echo '<h1 id="loginName" style="padding-bottom:0px; padding-right:40px; font-size:25px; text-align:right"> Hi, ' . $_SESSION["name"] . ' | ' . '<a href="logout.php">Log Out</a>' . '</h1>'; ?>
 				<div id="header">
 						
 					<!-- Logo -->
@@ -61,6 +61,7 @@ session_start();
 								<li><a href="contactUs_page.php">Contact Us</a></li>
 								<li><a href="signUp_page.php">Sign Up</a></li>
 								<li class="current"><a href="login_page.php">Login</a></li>
+								<?php if(isset($_SESSION["name"])) echo '<li><a href="MemberIndex_page.php">Member Page</a></li>'; ?>
 							</ul>
 						</nav>
 

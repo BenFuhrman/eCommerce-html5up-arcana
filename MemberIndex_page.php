@@ -6,10 +6,9 @@
 -->
 <html>
 	<?php
-	if(!$_SESSION['name'].isset()){
-		<html>
-		<meta http-equiv="refresh" content="0;url=http://localhost/eCommerce-html5up-arcana/login.html">
-		</html>
+	session_start();
+	if(!isset($_SESSION["name"])){
+		header("Location:login_page.php");
 	}
 	?>
 	<head>
@@ -64,6 +63,7 @@
 								<li><a href="contactUs.html">Contact Us</a></li>
 								<li><a href="signUp.html">Sign Up</a></li>
 								<li><a href="login.html">Login</a></li>
+								<?php if(isset($_SESSION["name"])) echo '<li><a href="MemberIndex_page.php">Member Page</a></li>'; ?>
 							</ul>
 						</nav>
 

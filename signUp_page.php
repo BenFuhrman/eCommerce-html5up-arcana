@@ -23,7 +23,7 @@ session_start();
 	<body>
 				
 		<div id="page-wrapper">
-				<?php if(isset($_SESSION["name"])) echo '<p id="loginName" style="padding:0px; padding-right:40px; font-size:25px; text-align:right"> Hi, ' . $_SESSION["name"] . '</p>'; ?>
+				<?php if(isset($_SESSION["name"])) echo '<h1 id="loginName" style="padding-bottom:0px; padding-right:40px; font-size:25px; text-align:right"> Hi, ' . $_SESSION["name"] . ' | ' . '<a href="logout.php">Log Out</a>' . '</h1>'; ?>
 			<!-- Header -->
 				<div id="header">
 
@@ -65,6 +65,7 @@ session_start();
 								<li><a href="contactUs_page.php">Contact Us</a></li>
 								<li class="current"><a href="signUp_page.php">Sign Up</a></li>
 								<li><a href="login_page.php">Login</a></li>
+								<?php if(isset($_SESSION["name"])) echo '<li><a href="MemberIndex_page.php">Member Page</a></li>'; ?>
 							</ul>
 						</nav>
 
@@ -87,9 +88,6 @@ session_start();
 								<div class="12u" style="padding-bottom:0px; padding-top:0px;">
 									<h1 align="left" style="padding:0px; font-size:20px">Email Address:</h1>
 									<input type="email" name="Email" id="Email" placeholder="" required pattern="[a-zA-Z0-9\.]+[@]{1}[a-zA-Z]+\.[a-zA-Z]{2,6}" title="Input should be of a valid email form."/>
-									<?php
-										echo "Hi";
-									?>
 									<!--
 									required pattern="[^@]+@[^@]+\.[a-zA-Z]{2,6}"
 									-->

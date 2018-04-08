@@ -59,6 +59,11 @@ session_start();
 								<li><a href="contactUs.html">Contact Us</a></li>
 								<li><a href="signUp.html">Sign Up</a></li>
 								<li><a href="login.html">Login</a></li>
+								<?php
+									if(!isSet($_SESSION['name'])){
+										header("Location:login_page.php");
+									}
+								?>
 							</ul>
 						</nav>
 
