@@ -21,23 +21,36 @@ $hash = password_hash($toinsertpass, PASSWORD_BCRYPT, $options);
  
 $sqlcheckemail = "SELECT * FROM customerdata WHERE Email='$toinsertemail' AND Password='$hash'";
 $amountwithsameemail = $conn->query($sqlcheckemail);
+
+$row = mysqli_fetch_array($amountwithsameemail);
+$sqlfirstname = $row['FirstName'] . " ";
+
+echo $sqlfirstname;
 $numentries = mysqli_num_rows($amountwithsameemail);
+
+$_SESSION["name"] = $sqlfirstname;
 $isAllowed = $numentries > 0;
  
 $conn->close();
 
-# jabba@gmail.com
-# JabbaTheHut1
+# <jabba>@gmail.com
+# <Jabba>TheHut1
 
 ?>
 
 <script type="text/javascript">
 
+	function alertMessage(theMessage){
+		window.setTimeout( function (){alert(theMessage)}, 0);
+	}
+
 	var wasSuccessful = "<?php echo $isAllowed ?>";
 	if(wasSuccessful){
-		alert("Login success");
+		alertMessage("Login successful");
+		window.open("/eCommerce-html5up-arcana/login.html", "_self");
 	}
 	else {
-		alert("Login failure");
+		window.history.go(-1);
+		alertMessage("Incorrect email / password.");
 	}
 </script>

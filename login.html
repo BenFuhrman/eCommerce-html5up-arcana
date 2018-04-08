@@ -4,6 +4,9 @@
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
+<?php
+session_start();
+?>
 <html>
 	<head>
 		<title>Login</title>
@@ -17,10 +20,10 @@
 	<body>
 		
 		<div id="page-wrapper">
-
 			<!-- Header -->
+				<p id="loginName" style="padding:0px; padding-right:40px; font-size:25px; text-align:right"><a href="login.html" id="logo">Hi, click here to login<em></em></a></p>
 				<div id="header">
-
+						
 					<!-- Logo -->
 						<h1 style="padding:0px; font-size:40px"><a href="index.html" id="logo">Pretty Patties<em></em></a></h1>
 						<h1 style="padding:0px; font-size:15px"><a href="index.html" id="logo"><em>Putting the <strong>fun</strong> back in food</em></a></h1>
@@ -91,43 +94,6 @@
 		<!--End pasted text -->
 		<div class="form">
       
-      <!--
-	  <ul class="tab-group">
-        <li class="tab active"><a href="#signup">Sign Up</a></li>
-        <li class="tab"><a href="#login">Log In</a></li>
-      </ul>
-	  -->
-      
-      
-        <!--
-        <div id="login">   
-          <h1>Welcome Back!</h1>
-          
-          <form action="/" method="post">
-          
-            <div class="field-wrap">
-            <label>
-              Email Address<span class="req">*</span>
-            </label>
-            <input type="email"required autocomplete="off"/>
-          </div>
-          
-          <div class="field-wrap">
-            <label>
-              Password<span class="req">*</span>
-            </label>
-            <input type="password"required autocomplete="off"/>
-          </div>
-          
-          <p class="forgot"><a href="#">Forgot Password?</a></p>
-          
-          <button class="button button-block"/>Log In</button>
-          
-          </form>
-
-        </div>
-		-->
-        
       </div><!-- tab-content -->
       
 </div> <!-- /form -->
@@ -141,3 +107,8 @@
 
 	</body>
 </html>
+
+<script type="text/javascript">
+	var userName = "Ben";
+	document.getElementById("loginName").innerHTML = "Hi, " + userName;
+</script>
