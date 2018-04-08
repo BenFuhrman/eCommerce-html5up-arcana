@@ -61,7 +61,7 @@
 								<li><a href="shop.html">Shop</a></li>
 								<li><a href="aboutUs.html">About Us</a></li>
 								<li><a href="contactUs.html">Contact Us</a></li>
-								<li><a href="signUp.html">Sign Up</a></li>
+								<?php if(!isset($_SESSION["name"])) echo '<li><a href="signUp_page.php">Sign Up</a></li>'; ?>
 								<li><a href="login.html">Login</a></li>
 								<?php if(isset($_SESSION["name"])) echo '<li><a href="MemberIndex_page.php">Member Page</a></li>'; ?>
 							</ul>
@@ -104,9 +104,6 @@
 								<div class="12u" style="padding-bottom:0px; padding-top:0px;">
 									<h1 align="left" style="padding:0px; font-size:20px">Email Address:</h1>
 									<input type="email" name="Email" id="Email" placeholder="" required pattern="[a-zA-Z0-9\.]+[@]{1}[a-zA-Z]+\.[a-zA-Z]{2,6}" title="Input should be of a valid email form."/>
-									<?php
-										echo "Hi";
-									?>
 									<!--
 									required pattern="[^@]+@[^@]+\.[a-zA-Z]{2,6}"
 									-->
@@ -191,7 +188,7 @@
 								<div class="12u" align="center">
 									<div class="12u">
 										<ul class="actions">
-											<li><input type="submit" class="button alt" value="Sign-up" /></li>
+											<li><input type="submit" class="button alt" value="Save Changes" /></li>
 										</ul>
 									</div>
 								</div>
