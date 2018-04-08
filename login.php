@@ -31,9 +31,12 @@ echo $sqlfirstname;
 echo $sqlemail;
 $numentries = mysqli_num_rows($amountwithsameemail);
 
-$_SESSION["name"] = $sqlfirstname;
-$_SESSION["email"] = $sqlemail;
 $isAllowed = $numentries > 0;
+
+if($isAllowed){
+	$_SESSION["name"] = $sqlfirstname;
+	$_SESSION["email"] = $sqlemail;
+}
  
 $conn->close();
 
