@@ -1,6 +1,7 @@
 <?php
 
 include ("connection.php");
+session_start();
 $conn = Connect();
 
 $toinsertemail = $_POST["Email"];
@@ -23,7 +24,7 @@ $sqlcheckemail = "SELECT * FROM customerdata WHERE Email='$toinsertemail' AND Pa
 $amountwithsameemail = $conn->query($sqlcheckemail);
 
 $row = mysqli_fetch_array($amountwithsameemail);
-$sqlfirstname = $row['FirstName'] . " ";
+$sqlfirstname = $row['FirstName'] . "";
 
 echo $sqlfirstname;
 $numentries = mysqli_num_rows($amountwithsameemail);
@@ -47,7 +48,7 @@ $conn->close();
 	var wasSuccessful = "<?php echo $isAllowed ?>";
 	if(wasSuccessful){
 		alertMessage("Login successful");
-		window.open("/eCommerce-html5up-arcana/login.html", "_self");
+		window.open("/eCommerce-html5up-arcana/login_page.php", "_self");
 	}
 	else {
 		window.history.go(-1);
