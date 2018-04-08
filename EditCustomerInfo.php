@@ -3,10 +3,16 @@
 include ("connection.php");
 session_start();
 $conn = Connect();
-
+$fname = $_POST["FirstName"];
+$lname = $_POST["LastName"];
 $custemail = $_POST["Email"];
 $custpass =  $_POST["Password"];
 $checkpass = $_POST["Password2"];
+$address = $_POST["Address"];
+$city = $_POST["City"];
+$state = $_POST["State"];
+$zip = $_POST["Zip"];
+
 
 
 $emailextended = $toinsertemail;
@@ -32,8 +38,10 @@ echo $sqlfirstname;
 $numentries = mysqli_num_rows($amountwithsameemail);
 
 $_SESSION["name"] = $sqlfirstname;
-$isAllowed = $numentries > 0;
- 
+$isAllowed = $custpass == $checkpass;
+if($isAllowed){
+	$updateInfo = $conn->query("UPDATE customerdata SET FirstName = '$fname', LastName = '$lname', Address = '$address', City = '$city', State = '$state', Zip = '$zip' WHERE Email='$custemail'");
+}
 $conn->close();
 
 # <jabba>@gmail.com
@@ -49,8 +57,8 @@ $conn->close();
 
 	var wasSuccessful = "<?php echo $isAllowed ?>";
 	if(wasSuccessful){
-		alertMessage("Login successful");
-		window.open("/eCommerce-html5up-arcana/login_page.php", "_self");
+		alertMessage("Changes Saved");
+		window.open("/eCommerce-html5up-arcana/MemberIndex_page.php", "_self");
 	}
 	else {
 		window.history.go(-1);
