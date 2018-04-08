@@ -121,7 +121,7 @@ exit;
 	else{
 		// hard reload		
 		alert("Successful sign-up");
-		window.open("/eCommerce-html5up-arcana/signUp.html", "_self");
+		window.open("/eCommerce-html5up-arcana/signUp_page.php", "_self");
 	}
 
 </script>
