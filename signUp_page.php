@@ -88,9 +88,6 @@ session_start();
 								<div class="12u" style="padding-bottom:0px; padding-top:0px;">
 									<h1 align="left" style="padding:0px; font-size:20px">Email Address:</h1>
 									<input type="email" name="Email" id="Email" placeholder="" required pattern="[a-zA-Z0-9\.]+[@]{1}[a-zA-Z]+\.[a-zA-Z]{2,6}" title="Input should be of a valid email form."/>
-									<?php
-										echo "Hi";
-									?>
 									<!--
 									required pattern="[^@]+@[^@]+\.[a-zA-Z]{2,6}"
 									-->
