@@ -58,7 +58,7 @@
 								<li><a href="right-sidebar.html">Right Sidebar</a></li>
 								<li><a href="two-sidebar.html">Two Sidebar</a></li>
 								-->
-								<li><a href="shop._page.php">Shop</a></li>
+								<li><a href="shop_page.php">Shop</a></li>
 								<li><a href="aboutUs_page.php">About Us</a></li>
 								<li><a href="contactUs_page.php">Contact Us</a></li>
 								<li><a href="signUp_page.php">Sign Up</a></li>
