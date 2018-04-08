@@ -5,13 +5,6 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
 <html>
-	<?php
-	if(!$_SESSION['name'].isset()){
-		<html>
-		<meta http-equiv="refresh" content="0;url=http://localhost/eCommerce-html5up-arcana/login.html">
-		</html>
-	}
-	?>
 	<head>
 		<title>Pretty Patties</title>
 		<meta charset="utf-8" />
@@ -72,7 +65,8 @@
 			<!-- Banner -->
 				<section id="banner">
 					<header>
-						<h2>Welcome to the Pretty Patty Experience</h2>
+						<h2>Pretty Patties: <em>Food re-imagined.</em></h2>
+						<a href="aboutUs.html" class="button">Learn More</a>
 					</header>
 				</section>
 
@@ -80,11 +74,14 @@
 				<section class="wrapper style1">
 					<div class="container">
 						<div class="row 200%">
-							<h3> Customer Info </h3>
-							
-							<!--
 							<section class="4u 12u(narrower)">
 								<div class="box highlight">
+									<!--
+									<i class="icon major fa-paper-plane"></i>
+									<a href="#" class="icon major left"><img src="images/fastest delivery.png" alt=""/></a>									
+									<a href="#" class="icon major left"><img src="images/freshest food.png" alt="" /></a>									
+									<a href="#" class="icon major left"><img src="images/prettiest patties.png" alt="" /></a>
+									-->
 									<i class="icon major fa-truck"></i>
 									<h3>The Fastest Delivery</h3>
 									<p>Overnight shipping anywhere on the East Coast.</p>
@@ -104,7 +101,6 @@
 									<p>Find a better looking burger, I dare you.</p>
 								</div>
 							</section>
-							-->
 						</div>
 					</div>
 				</section>
