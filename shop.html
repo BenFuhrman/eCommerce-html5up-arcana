@@ -121,18 +121,49 @@ session_start();
 						
 						<html>
 						<body>
-
+						<p></p>
+						<p></p>
 						<h2>Color Picker</h2>
-						<p>The <strong>input type="color"</strong> is used for input fields that should contain a color.</p>
-						<p>Depending on browser support:<br>A color picker can pop-up when you enter the input field.</p>
 
-						<form action="sendEmail.php">  <!--"/action_page.php">-->
+						<!--<form action="sendEmail.php"> 
   						Select your favorite color:
-  						<input type="color" name="fullname" value="#ff0000">
+  						<input type="color" name="favcolor" value="#ff0000">
   						<input type="submit" value="Request Color">
 						</form>
 						</body>
-						</html>
+						</html>-->
+						
+						
+						<form action="ColorEmail.php" method="post">
+							<div class="row 50%">
+								<div class="6u 12u(mobilep)">
+									<input type="text" name="fullname" id="fullname" placeholder="Name" />
+								</div>
+								<div class="6u 12u(mobilep)">
+									<input type="email" name="emailaddress" id="emailaddress" placeholder="Email" />
+								</div>
+							</div>
+							<p></p>
+							<p></p>
+							Select your favorite color:
+							&ensp;
+								<input type="color" name="message" id = "message" value="#ff0000">
+							<!--<div class="row 50%">
+								<div class="12u">
+									<textarea name="message" id="message" placeholder="Message" rows="5"></textarea>
+								</div>
+							</div>-->
+							
+							<p></p>
+							<p></p>
+							<div class="row 50%">
+								<div class="12u">
+									<ul class="actions">
+										<li><input type="submit" class="button alt" value="Request Color" /></li>
+									</ul>
+								</div>
+							</div>
+						</form>
 						
 					</section>			
 				</div>
