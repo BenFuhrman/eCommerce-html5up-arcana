@@ -6,10 +6,8 @@
 -->
 <html>
 	<?php
-	if(!$_SESSION['name'].isset()){
-		<html>
-		<meta http-equiv="refresh" content="0;url=http://localhost/eCommerce-html5up-arcana/login.html">
-		</html>
+	if(!isSet($_SESSION['name'])){
+		header("Location:login_page.php");
 	}
 	?>
 	<head>
