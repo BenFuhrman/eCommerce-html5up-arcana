@@ -6,7 +6,8 @@
 -->
 <html>
 	<?php
-	if(!isSet($_SESSION['name'])){
+	session_start();
+	if(!isset($_SESSION["name"])){
 		header("Location:login_page.php");
 	}
 	?>
