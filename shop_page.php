@@ -116,35 +116,37 @@ session_start();
 						</div>
 						
 						<div align="center">
-							<h3 style="background: #2B2B2B; color: white;">Current Bitcoin Price:</h3>
-							<div class="btcwdgt-price"></div>
+							<h3 style="background: #2B2B2B; color: white;">Request a new color:</h3>
 						</div>
-						
-						
-						<p></p>
-						<p></p>
-						<h2>Color Picker</h2>
 		
 						<form action="ColorEmail.php" method="post">
 							<div class="row 50%">
 								<div class="6u 12u(mobilep)">
-									<input type="text" name="fullname" id="fullname" placeholder="Name" />
+									<?php
+									if(isset($_SESSION["name"])){
+										echo '<input type="hidden" name="fullname" id="fullname" value="'. $_SESSION["name"] .'" />';
+									}
+									else{
+										echo '<input type="text" name="fullname" id="fullname" placeholder="Name" />';
+									}
+									?>
 								</div>
 								<div class="6u 12u(mobilep)">
-									<input type="email" name="emailaddress" id="emailaddress" placeholder="Email" />
+									<?php
+									if(isset($_SESSION["name"])){
+										echo '<input type="hidden" name="emailaddress" id="emailaddress" value="'. $_SESSION["email"] .'" />';
+									}
+									else{
+										echo '<input type="email" name="emailaddress" id="emailaddress" placeholder="Email" />';
+									}
+									?>
 								</div>
 							</div>
 							<p></p>
 							<p></p>
 							Select your favorite color:
 							&ensp;
-								<input type="color" name="message" id = "message" value="#ff0000">
-							<!--<div class="row 50%">
-								<div class="12u">
-									<textarea name="message" id="message" placeholder="Message" rows="5"></textarea>
-								</div>
-							</div>-->
-							
+								<input type="color" name="message" id = "message" value="#ff0000">							
 							<p></p>
 							<p></p>
 							<div class="row 50%">

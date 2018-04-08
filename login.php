@@ -25,11 +25,14 @@ $amountwithsameemail = $conn->query($sqlcheckemail);
 
 $row = mysqli_fetch_array($amountwithsameemail);
 $sqlfirstname = $row['FirstName'] . "";
+$sqlemail = $row['Email'] . "";
 
 echo $sqlfirstname;
+echo $sqlemail;
 $numentries = mysqli_num_rows($amountwithsameemail);
 
 $_SESSION["name"] = $sqlfirstname;
+$_SESSION["email"] = $sqlemail;
 $isAllowed = $numentries > 0;
  
 $conn->close();
