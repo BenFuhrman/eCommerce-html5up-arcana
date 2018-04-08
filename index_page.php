@@ -4,6 +4,9 @@
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
+<?php
+session_start();
+?>
 <html>
 	<head>
 		<title>Pretty Patties</title>
@@ -16,18 +19,18 @@
 	</head>
 	<body>
 		<div id="page-wrapper">
-			<p style="padding:0px; padding-right:40px; font-size:25px; text-align:right"><a href="login.html" id="logo">Hi, click here to login<em></em></a></p>
+				<?php if(isset($_SESSION["name"])) echo '<p id="loginName" style="padding:0px; padding-right:40px; font-size:25px; text-align:right"> Hi, ' . $_SESSION["name"] . '</p>'; ?>
 			<!-- Header -->
 				<div id="header">
 
 					<!-- Logo -->
-						<h1 style="padding:0px; font-size:40px"><a href="index.html" id="logo">Pretty Patties<em></em></a></h1>
-						<h1 style="padding:0px; font-size:15px"><a href="index.html" id="logo"><em>Putting the <strong>fun</strong> back in food</em></a></h1>
+						<h1 style="padding:0px; font-size:40px"><a href="index_page.php" id="logo">Pretty Patties<em></em></a></h1>
+						<h1 style="padding:0px; font-size:15px"><a href="index_page.php" id="logo"><em>Putting the <strong>fun</strong> back in food</em></a></h1>
 						<img src=./images/hamburger3.png height="50" width="50"> </img>
 					<!-- Nav -->
 						<nav id="nav">
 							<ul>
-								<li class="current"><a href="index.html">Home</a></li>
+								<li class="current"><a href="index_page.php">Home</a></li>
 								<!--
 								<li>
 									<a href="#">Dropdown</a>
@@ -52,11 +55,11 @@
 								<li><a href="right-sidebar.html">Right Sidebar</a></li>
 								<li><a href="two-sidebar.html">Two Sidebar</a></li>
 								-->
-								<li><a href="shop.html">Shop</a></li>
-								<li><a href="aboutUs.html">About Us</a></li>
-								<li><a href="contactUs.html">Contact Us</a></li>
-								<li><a href="signUp.html">Sign Up</a></li>
-								<li><a href="login.html">Login</a></li>
+								<li><a href="shop_page.php">Shop</a></li>
+								<li><a href="aboutUs_page.php">About Us</a></li>
+								<li><a href="contactUs_page.php">Contact Us</a></li>
+								<li><a href="signUp_page.php">Sign Up</a></li>
+								<li><a href="login_page.php">Login</a></li>
 							</ul>
 						</nav>
 
@@ -66,7 +69,7 @@
 				<section id="banner">
 					<header>
 						<h2>Pretty Patties: <em>Food re-imagined.</em></h2>
-						<a href="aboutUs.html" class="button">Learn More</a>
+						<a href="aboutUs_page.php" class="button">Learn More</a>
 					</header>
 				</section>
 

@@ -47,5 +47,5 @@ echo $themessage;
 		window.setTimeout( function (){alert(theMessage)}, 0);
 	}
 	alert("Message Sent")
-	window.open("/eCommerce-html5up-arcana/contactUs.html", "_self");
+	window.open("/eCommerce-html5up-arcana/contactUs_page.php", "_self");
 </script>

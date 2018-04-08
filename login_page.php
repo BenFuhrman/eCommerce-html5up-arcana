@@ -24,14 +24,14 @@ session_start();
 				<div id="header">
 						
 					<!-- Logo -->
-						<h1 style="padding:0px; font-size:40px"><a href="index.html" id="logo">Pretty Patties<em></em></a></h1>
-						<h1 style="padding:0px; font-size:15px"><a href="index.html" id="logo"><em>Putting the <strong>fun</strong> back in food</em></a></h1>
+						<h1 style="padding:0px; font-size:40px"><a href="index_page.php" id="logo">Pretty Patties<em></em></a></h1>
+						<h1 style="padding:0px; font-size:15px"><a href="index_page.php" id="logo"><em>Putting the <strong>fun</strong> back in food</em></a></h1>
 						<img src=./images/hamburger3.png height="50" width="50"> </img>
 						
 					<!-- Nav -->
 						<nav id="nav">
 							<ul>
-								<li><a href="index.html">Home</a></li>
+								<li><a href="index_page.php">Home</a></li>
 								<!--
 								<li>
 									<a href="#">Dropdown</a>
@@ -56,11 +56,11 @@ session_start();
 								<li><a href="right-sidebar.html">Right Sidebar</a></li>
 								<li><a href="two-sidebar.html">Two Sidebar</a></li>
 								-->
-								<li><a href="shop.html">Shop</a></li>
-								<li><a href="aboutUs.html">About Us</a></li>
-								<li><a href="contactUs.html">Contact Us</a></li>
-								<li><a href="signUp.html">Sign Up</a></li>
-								<li class="current"><a href="login.html">Login</a></li>
+								<li><a href="shop_page.php">Shop</a></li>
+								<li><a href="aboutUs_page.php">About Us</a></li>
+								<li><a href="contactUs_page.php">Contact Us</a></li>
+								<li><a href="signUp_page.php">Sign Up</a></li>
+								<li class="current"><a href="login_page.php">Login</a></li>
 							</ul>
 						</nav>
 
