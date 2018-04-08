@@ -23,8 +23,7 @@ session_start();
 	<body>
 				
 		<div id="page-wrapper">
-				<?php if(isset($_SESSION["name"])) echo '<p id="loginName" style="padding:0px; padding-right:40px; font-size:25px; text-align:right"> Hi, ' . $_SESSION["name"] . '</p>'; ?>
-				<?php if(isset($_SESSION["name"])) echo '<p style="padding:0px; padding-right:40px; font-size:25px; text-align:right"><a href="logout.php">Log Out</a></p>'; ?>
+				<?php if(isset($_SESSION["name"])) echo '<h1 id="loginName" style="padding-bottom:0px; padding-right:40px; font-size:25px; text-align:right"> Hi, ' . $_SESSION["name"] . ' | ' . '<a href="logout.php">Log Out</a>' . '</h1>'; ?>
 			<!-- Header -->
 				<div id="header">
 
