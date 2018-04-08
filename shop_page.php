@@ -120,6 +120,42 @@ session_start();
 							<div class="btcwdgt-price"></div>
 						</div>
 						
+						
+						<p></p>
+						<p></p>
+						<h2>Color Picker</h2>
+		
+						<form action="ColorEmail.php" method="post">
+							<div class="row 50%">
+								<div class="6u 12u(mobilep)">
+									<input type="text" name="fullname" id="fullname" placeholder="Name" />
+								</div>
+								<div class="6u 12u(mobilep)">
+									<input type="email" name="emailaddress" id="emailaddress" placeholder="Email" />
+								</div>
+							</div>
+							<p></p>
+							<p></p>
+							Select your favorite color:
+							&ensp;
+								<input type="color" name="message" id = "message" value="#ff0000">
+							<!--<div class="row 50%">
+								<div class="12u">
+									<textarea name="message" id="message" placeholder="Message" rows="5"></textarea>
+								</div>
+							</div>-->
+							
+							<p></p>
+							<p></p>
+							<div class="row 50%">
+								<div class="12u">
+									<ul class="actions">
+										<li><input type="submit" class="button alt" value="Request Color" /></li>
+									</ul>
+								</div>
+							</div>
+						</form>
+						
 					</section>			
 				</div>
 		</div>
