@@ -1,0 +1,266 @@
+<!DOCTYPE HTML>
+<!--
+	Arcana by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<?php
+	if(!$_SESSION['name'].isset()){
+		<html>
+		<meta http-equiv="refresh" content="0;url=http://localhost/eCommerce-html5up-arcana/login.html">
+		</html>
+	}
+	?>
+	<head>
+		<title>Pretty Patties</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+	</head>
+	<body>
+		<div id="page-wrapper">
+			<p style="padding:0px; padding-right:40px; font-size:25px; text-align:right"><a href="login.html" id="logo">Hi, click here to login<em></em></a></p>
+			<!-- Header -->
+				<div id="header">
+
+					<!-- Logo -->
+						<h1 style="padding:0px; font-size:40px"><a href="index.html" id="logo">Pretty Patties<em></em></a></h1>
+						<h1 style="padding:0px; font-size:15px"><a href="index.html" id="logo"><em>Putting the <strong>fun</strong> back in food</em></a></h1>
+						<img src=./images/hamburger3.png height="50" width="50"> </img>
+					<!-- Nav -->
+						<nav id="nav">
+							<ul>
+								<li class="current"><a href="index.html">Home</a></li>
+								<!--
+								<li>
+									<a href="#">Dropdown</a>
+									<ul>
+										<li><a href="#">Lorem dolor</a></li>
+										<li><a href="#">Magna phasellus</a></li>
+										<li><a href="#">Etiam sed tempus</a></li>
+										<li>
+											<a href="#">Submenu</a>
+											<ul>
+												<li><a href="#">Lorem dolor</a></li>
+												<li><a href="#">Phasellus magna</a></li>
+												<li><a href="#">Magna phasellus</a></li>
+												<li><a href="#">Etiam nisl</a></li>
+												<li><a href="#">Veroeros feugiat</a></li>
+											</ul>
+										</li>
+										<li><a href="#">Veroeros feugiat</a></li>
+									</ul>
+								</li>
+								<li><a href="left-sidebar.html">Left Sidebar</a></li>
+								<li><a href="right-sidebar.html">Right Sidebar</a></li>
+								<li><a href="two-sidebar.html">Two Sidebar</a></li>
+								-->
+								<li><a href="shop.html">Shop</a></li>
+								<li><a href="aboutUs.html">About Us</a></li>
+								<li><a href="contactUs.html">Contact Us</a></li>
+								<li><a href="signUp.html">Sign Up</a></li>
+								<li><a href="login.html">Login</a></li>
+							</ul>
+						</nav>
+
+				</div>
+
+			<!-- Banner -->
+				<section id="banner">
+					<header>
+						<h2>Welcome to the Pretty Patty Experience</h2>
+					</header>
+				</section>
+
+			<!-- Highlights -->
+				<section class="wrapper style1">
+					<div class="container">
+						<div class="row 200%">
+							<h3> Customer Info </h3>
+								<!-- $_SESSION variables go here -->
+						
+						</div>
+					</div>
+				</section>
+
+			<div id="footer">
+				<div class="row">			
+					<section class="12u" style="padding-left:100px; padding-right:100px; padding-top:0px; padding-bottom:10px;">
+						<h3>Edit Customer Information</h3>
+						<form action="EditCustomerInfo.php" method="post">
+							<div class="row 50%">
+								<div class="12u" style="padding-bottom:0px; padding-top:0px;">
+									<h1 align="left" style="padding:0px; font-size:20px">First Name:</h1>
+									<input type="text" name="FirstName" id="FirstName" placeholder="" required pattern="[A-Za-z]+" title="Input should only contain letters."/>
+								</div>
+								<div class="12u" style="padding-bottom:0px; padding-top:0px;">
+									<h1 align="left" style="padding:0px; font-size:20px">Last Name:</h1>
+									<input type="text" name="LastName" id="LastName" placeholder="" required pattern="[A-Za-z]+" title="Input should only contain letters."/>
+								</div>
+								<div class="12u" style="padding-bottom:0px; padding-top:0px;">
+									<h1 align="left" style="padding:0px; font-size:20px">Email Address:</h1>
+									<input type="email" name="Email" id="Email" placeholder="" required pattern="[a-zA-Z0-9\.]+[@]{1}[a-zA-Z]+\.[a-zA-Z]{2,6}" title="Input should be of a valid email form."/>
+									<?php
+										echo "Hi";
+									?>
+									<!--
+									required pattern="[^@]+@[^@]+\.[a-zA-Z]{2,6}"
+									-->
+								</div>
+								<div class="12u" style="padding-bottom:0px; padding-top:0px;">
+									<h1 align="left" style="padding:0px; font-size:20px">Password:</h1>
+									<input type="password" name="Password" id="Password" placeholder="" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"/>
+								</div>
+								<div class="12u" style="padding-bottom:0px; padding-top:0px;">
+									<h1 align="left" style="padding:0px; font-size:20px">Confirm Password:</h1>
+									<input type="password" name="Password2" id="Password2" placeholder="" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"/>
+								</div>
+								<div class="12u" style="padding-bottom:0px; padding-top:0px;">
+									<h1 align="left" style="padding:0px; font-size:20px">Address:</h1>
+									<input type="text" name="Address" id="Address" placeholder="" required pattern="[0-9 \.]+[A-Za-z\.]+[A-Za-z0-9 \.]*" title="Input should only contain letters,numbers, and a period."/>
+								</div>
+								<div class="12u" style="padding-bottom:0px; padding-top:0px;">
+									<h1 align="left" style="padding:0px; font-size:20px">City:</h1>
+									<input type="text" name="City" id="City" placeholder="" required pattern="[A-Za-z ]+" title="Input should only contain letters."/>	
+								</div>
+								<div class="12u" style="padding-bottom:0px; padding-top:0px;">
+									<h1 align="left" style="padding:0px; font-size:20px">State:</h1>
+									<select type="text" name="State" id="State" placeholder="" required pattern="">
+										<option value="" selected disabled hidden></option>
+										<option value="AL">Alabama</option>
+										<option value="AK">Alaska</option>
+										<option value="AZ">Arizona</option>
+										<option value="AR">Arkansas</option>
+										<option value="CA">California</option>
+										<option value="CO">Colorado</option>
+										<option value="CT">Connecticut</option>
+										<option value="DE">Delaware</option>
+										<option value="DC">District Of Columbia</option>
+										<option value="FL">Florida</option>
+										<option value="GA">Georgia</option>
+										<option value="HI">Hawaii</option>
+										<option value="ID">Idaho</option>
+										<option value="IL">Illinois</option>
+										<option value="IN">Indiana</option>
+										<option value="IA">Iowa</option>
+										<option value="KS">Kansas</option>
+										<option value="KY">Kentucky</option>
+										<option value="LA">Louisiana</option>
+										<option value="ME">Maine</option>
+										<option value="MD">Maryland</option>
+										<option value="MA">Massachusetts</option>
+										<option value="MI">Michigan</option>
+										<option value="MN">Minnesota</option>
+										<option value="MS">Mississippi</option>
+										<option value="MO">Missouri</option>
+										<option value="MT">Montana</option>
+										<option value="NE">Nebraska</option>
+										<option value="NV">Nevada</option>
+										<option value="NH">New Hampshire</option>
+										<option value="NJ">New Jersey</option>
+										<option value="NM">New Mexico</option>
+										<option value="NY">New York</option>
+										<option value="NC">North Carolina</option>
+										<option value="ND">North Dakota</option>
+										<option value="OH">Ohio</option>
+										<option value="OK">Oklahoma</option>
+										<option value="OR">Oregon</option>
+										<option value="PA">Pennsylvania</option>
+										<option value="RI">Rhode Island</option>
+										<option value="SC">South Carolina</option>
+										<option value="SD">South Dakota</option>
+										<option value="TN">Tennessee</option>
+										<option value="TX">Texas</option>
+										<option value="UT">Utah</option>
+										<option value="VT">Vermont</option>
+										<option value="VA">Virginia</option>
+										<option value="WA">Washington</option>
+										<option value="WV">West Virginia</option>
+										<option value="WI">Wisconsin</option>
+										<option value="WY">Wyoming</option>
+									</select> 
+								</div>
+								<div class="12u" style="padding-bottom:0px; padding-top:0px;">
+									<h1 align="left" style="padding:0px; font-size:20px">Zip Code:</h1>
+									<input type="text" name="Zip" id="Zip" placeholder="" required pattern="[0-9]{5}" title="Input should only contain five numbers."/>
+								</div>
+								<div class="12u" align="center">
+									<div class="12u">
+										<ul class="actions">
+											<li><input type="submit" class="button alt" value="Sign-up" /></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</form>
+					</section>			
+				</div>
+				
+
+			
+			<!-- Footer -->
+			<!--
+				<div id="footer">
+					<div class="container">
+						<div class="row">
+							<section class="3u 6u$(narrower) 12u$(mobilep)">
+								<h3>More Links to Stuff</h3>
+								<ul class="links">
+									<li><a href="#">Duis neque nisi dapibus</a></li>
+									<li><a href="#">Sed et dapibus quis</a></li>
+									<li><a href="#">Rutrum accumsan sed</a></li>
+									<li><a href="#">Mattis et sed accumsan</a></li>
+									<li><a href="#">Duis neque nisi sed</a></li>
+									<li><a href="#">Sed et dapibus quis</a></li>
+									<li><a href="#">Rutrum amet varius</a></li>
+								</ul>
+							</section>
+							
+							<section class="6u 12u(narrower)">
+								<h3>Get In Touch</h3>
+								<form>
+									<div class="row 50%">
+										<div class="6u 12u(mobilep)">
+											<input type="text" name="name" id="name" placeholder="Name" />
+										</div>
+										<div class="6u 12u(mobilep)">
+											<input type="email" name="email" id="email" placeholder="Email" />
+										</div>
+									</div>
+									<div class="row 50%">
+										<div class="12u">
+											<textarea name="message" id="message" placeholder="Message" rows="5"></textarea>
+										</div>
+									</div>
+									<div class="row 50%">
+										<div class="12u">
+											<ul class="actions">
+												<li><input type="submit" class="button alt" value="Send Message" /></li>
+											</ul>
+										</div>
+									</div>
+								</form>
+							</section>
+							
+							
+						</div>
+					</div>
+
+				</div>
+		-->
+		</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.dropotron.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
