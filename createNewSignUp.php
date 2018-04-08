@@ -1,6 +1,7 @@
 <?php
 
 include ("connection.php");
+session_start();
 $conn = Connect();
 
 $toinsertfname =  $_POST["FirstName"];
