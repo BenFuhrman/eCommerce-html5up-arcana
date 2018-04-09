@@ -87,6 +87,9 @@ session_start();
 									<div class="inner">
 										<h3>Plaid Patties</h3>
 										<p>$9.99 USD</p>
+										<?php 
+										if(isset($_SESSION["name"])){
+										echo '
 										<p id="plaid">Error in Javascript</p>
 										<form action="https://test.bitpay.com/checkout" method="post" >
 											<input type="hidden" name="action" value="checkout" />
@@ -94,6 +97,9 @@ session_start();
 											<input type="hidden" name="data" value="qirB1JNjLtMG+AfKXIWK9pTnrg85iLeZhZXQswX8DzYTeR6qjdwQ/l2zfpmsPfo3Z+LH0RpxbB3fzAw3FvSXbbR1NnfmvEluBLkm9yh9hkqtTYuOG3ywWB9IiOflx1gfqQSXD953GVW98nWYFj0GT+xSy2ZNzwD5Fdz07D32fhxJ0OVkYJtDIWMW+kMhEMJb6qfCxfy7h9m5UWYGsZG/UZkbQJe4kQHp0iyGq13UDCTaDmJqp2LvD3Uwm0B+/z98Zn8SLQwSmox2gA/rheZYNQ==" />
 											<input type="image" src="https://test.bitpay.com/img/button-large.png" border="0" name="submit" alt="BitPay, the easy way to pay with bitcoins." >
 										</form>
+										';
+										}
+										?>
 									</div>
 								</div>
 							</section>
@@ -103,6 +109,9 @@ session_start();
 									<div class="inner">
 										<h3>Red Patties</h3>
 										<p>$4.99 USD</p>
+										<?php 
+										if(isset($_SESSION["name"])){
+										echo '
 										<p id="red">Error in Javascript</p>
 										<form action="https://test.bitpay.com/checkout" method="post" >
 											<input type="hidden" name="action" value="checkout" />
@@ -110,6 +119,9 @@ session_start();
 											<input type="hidden" name="data" value="qirB1JNjLtMG+AfKXIWK9pTnrg85iLeZhZXQswX8DzYTeR6qjdwQ/l2zfpmsPfo3UkCv3UXGxpAN463PJTD9zsrQl8BZhXkXn7aqvafUzqE+LzrocVpZ+l1L/H60L4vM+K6uTGMSFQi0krMHX2Ifxe8JNLUZ9KSTrr+Kng0OOyhxv0ivxrxgzyXy5Hp6ozZz4qOzDNdR2C1s6g/WOz10jfpMIPFG/atOmj9zOMEwcVGflBdxMXAOVFJlyc/hkeHcGSO110bmhGmmFuRXCEt1og==" />
 											<input type="image" src="https://test.bitpay.com/img/button-large.png" border="0" name="submit" alt="BitPay, the easy way to pay with bitcoins." >
 										</form>
+										'; 
+										}
+										?>
 									</div>
 								</div>
 							</section>							

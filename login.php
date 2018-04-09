@@ -27,8 +27,7 @@ $row = mysqli_fetch_array($amountwithsameemail);
 $sqlfirstname = $row['FirstName'] . "";
 $sqlemail = $row['Email'] . "";
 
-echo $sqlfirstname;
-echo $sqlemail;
+
 $numentries = mysqli_num_rows($amountwithsameemail);
 
 $isAllowed = $numentries > 0;
