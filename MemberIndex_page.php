@@ -69,11 +69,6 @@
 				</div>
 
 			<!-- Banner -->
-				<section id="banner">
-					<header>
-						<h2>Welcome to the Pretty Patty Experience</h2>
-					</header>
-				</section>
 
 			<div id="footer">
 				<div class="row">			
