@@ -25,7 +25,12 @@ $amountwithsameemail = $conn->query($sqlcheckemail);
 
 $row = mysqli_fetch_array($amountwithsameemail);
 $sqlfirstname = $row['FirstName'] . "";
+$sqllastname = $row['LastName'] . "";
 $sqlemail = $row['Email'] . "";
+$sqladdress = $row['Address'] . "";
+$sqlcity = $row['City'] . "";
+$sqlstate = $row['State'] . "";
+$sqlzip = $row['Zip'] . "";
 
 
 $numentries = mysqli_num_rows($amountwithsameemail);
@@ -34,7 +39,12 @@ $isAllowed = $numentries > 0;
 
 if($isAllowed){
 	$_SESSION["name"] = $sqlfirstname;
+	$_SESSION["lastName"] = $sqllastname;
 	$_SESSION["email"] = $sqlemail;
+	$_SESSION["address"] = $sqladdress;
+	$_SESSION["city"] = $sqlcity;
+	$_SESSION["state"] = $sqlstate;
+	$_SESSION["zip"] = $sqlzip;	
 }
  
 $conn->close();

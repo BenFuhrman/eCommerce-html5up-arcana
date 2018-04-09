@@ -75,17 +75,6 @@
 					</header>
 				</section>
 
-			<!-- Highlights -->
-				<section class="wrapper style1">
-					<div class="container">
-						<div class="row 200%">
-							<h3> Customer Info </h3>
-								<!-- $_SESSION variables go here -->
-						
-						</div>
-					</div>
-				</section>
-
 			<div id="footer">
 				<div class="row">			
 					<section class="12u" style="padding-left:100px; padding-right:100px; padding-top:0px; padding-bottom:10px;">
@@ -94,15 +83,15 @@
 							<div class="row 50%">
 								<div class="12u" style="padding-bottom:0px; padding-top:0px;">
 									<h1 align="left" style="padding:0px; font-size:20px">First Name:</h1>
-									<input type="text" name="FirstName" id="FirstName" placeholder="" required pattern="[A-Za-z]+" title="Input should only contain letters."/>
+									<input type="text" name="FirstName" id="FirstName" placeholder="<?php echo $_SESSION["name"]; ?>" required pattern="[A-Za-z]+" title="Input should only contain letters."/>
 								</div>
 								<div class="12u" style="padding-bottom:0px; padding-top:0px;">
 									<h1 align="left" style="padding:0px; font-size:20px">Last Name:</h1>
-									<input type="text" name="LastName" id="LastName" placeholder="" required pattern="[A-Za-z]+" title="Input should only contain letters."/>
+									<input type="text" name="LastName" id="LastName" placeholder="<?php echo $_SESSION["lastName"]; ?>" required pattern="[A-Za-z]+" title="Input should only contain letters."/>
 								</div>
 								<div class="12u" style="padding-bottom:0px; padding-top:0px;">
 									<h1 align="left" style="padding:0px; font-size:20px">Email Address:</h1>
-									<input type="email" name="Email" id="Email" placeholder="" required pattern="[a-zA-Z0-9\.]+[@]{1}[a-zA-Z]+\.[a-zA-Z]{2,6}" title="Input should be of a valid email form."/>
+									<input type="email" name="Email" id="Email" placeholder="<?php echo $_SESSION["email"]; ?>" required pattern="[a-zA-Z0-9\.]+[@]{1}[a-zA-Z]+\.[a-zA-Z]{2,6}" title="Input should be of a valid email form."/>
 									<!--
 									required pattern="[^@]+@[^@]+\.[a-zA-Z]{2,6}"
 									-->
@@ -117,15 +106,15 @@
 								</div>
 								<div class="12u" style="padding-bottom:0px; padding-top:0px;">
 									<h1 align="left" style="padding:0px; font-size:20px">Address:</h1>
-									<input type="text" name="Address" id="Address" placeholder="" required pattern="[0-9 \.]+[A-Za-z\.]+[A-Za-z0-9 \.]*" title="Input should only contain letters,numbers, and a period."/>
+									<input type="text" name="Address" id="Address" placeholder="<?php echo $_SESSION["address"]; ?>" required pattern="[0-9 \.]+[A-Za-z\.]+[A-Za-z0-9 \.]*" title="Input should only contain letters,numbers, and a period."/>
 								</div>
 								<div class="12u" style="padding-bottom:0px; padding-top:0px;">
 									<h1 align="left" style="padding:0px; font-size:20px">City:</h1>
-									<input type="text" name="City" id="City" placeholder="" required pattern="[A-Za-z ]+" title="Input should only contain letters."/>	
+									<input type="text" name="City" id="City" placeholder="<?php echo $_SESSION["city"]; ?>" required pattern="[A-Za-z ]+" title="Input should only contain letters."/>	
 								</div>
 								<div class="12u" style="padding-bottom:0px; padding-top:0px;">
 									<h1 align="left" style="padding:0px; font-size:20px">State:</h1>
-									<select type="text" name="State" id="State" placeholder="" required pattern="">
+									<select type="text" name="State" id="State" placeholder="<?php echo $_SESSION["state"]; ?>" required pattern="">
 										<option value="" selected disabled hidden></option>
 										<option value="AL">Alabama</option>
 										<option value="AK">Alaska</option>
@@ -182,7 +171,7 @@
 								</div>
 								<div class="12u" style="padding-bottom:0px; padding-top:0px;">
 									<h1 align="left" style="padding:0px; font-size:20px">Zip Code:</h1>
-									<input type="text" name="Zip" id="Zip" placeholder="" required pattern="[0-9]{5}" title="Input should only contain five numbers."/>
+									<input type="text" name="Zip" id="Zip" placeholder="<?php echo $_SESSION["zip"]; ?>" required pattern="[0-9]{5}" title="Input should only contain five numbers."/>
 								</div>
 								<div class="12u" align="center">
 									<div class="12u">
